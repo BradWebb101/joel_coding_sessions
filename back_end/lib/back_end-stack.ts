@@ -1,6 +1,7 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
+import { Route } from 'aws-cdk-lib/aws-appmesh';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class BackEndStack extends cdk.Stack {
@@ -14,5 +15,7 @@ export class BackEndStack extends cdk.Stack {
     }
 
     var websiteBucket = new Bucket(GLOBALS)
+
+    var route53 = new Route()
   }
 }
